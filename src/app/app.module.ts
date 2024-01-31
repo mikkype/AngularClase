@@ -19,7 +19,7 @@ import { Alumno } from './models/alumno.model';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    Alumno
+  
   ],
   
   bootstrap: [AppComponent]
