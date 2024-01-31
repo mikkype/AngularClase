@@ -1,0 +1,33 @@
+<p>Nombre : {{nombre}}({{email}})</p>
+<p>Alumno: {{nombre1}} {{apellido1}}</p>
+<p>Edad: {{edad}}</p>
+<p>Media de notas : {{mediaNotas()}}</p>
+<p>promedio nota : {{mediaNotas()}}</p>
+<p>ultima nota : {{notas[notas.length-1]}}</p>
+<p>{{esActivo()}}</p>
+<a [href]="linkedin">Linkedin</a>
+<br>
+<p>Faltas: {{diasTrabajados}}</p>
+<button class="btn  btn-success" (click)="anadirDia()">añadir dia</button>
+<button class="btn  btn-danger" (click)="disminuirDia()">diminuir</button>
+
+<p>Ingrese nombre<input type="text" [(ngModel)]="nombre1"></p>
+<p>Ingrese apellido<input type="text" [(ngModel)]="apellido1"></p>
+
+<p>EMAIL1 : {{email1}}</p>
+<button class="btn btn-primary" (click)="crearCorreo()">ingresar correp</button>
+
+<br>
+<button  class="btn  btn-success" (click)="anadirDia()">añadir dia</button>
+<button *ngIf="diasTrabajados>0" class="btn  btn-danger" (click)="disminuirDia()">diminuir</button>
+
+<p *ngIf="diasTrabajados>0" ;else noFalta>Faltasmostrado: {{diasTrabajados}}</p>
+<ng-template #noFalta><p>No ha faltado</p></ng-template>
+
+
+<p>promedio nota : {{mediaNotas()}}</p>
+<ul >
+    <li *ngFor="let m of notas">{{m}}</li>
+</ul>
+<p> Alumno:{{alumno.nombre}}</p>
+
